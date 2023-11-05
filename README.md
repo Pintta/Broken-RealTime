@@ -5,5 +5,5 @@ Tips:
 Disable qb files -> NetworkOverrideClockTime() areas
 Example you find NetworkOverrideClockTime() on you script, do that
 ```lua
--- NetworkOverrideClockTime()
+-- NetworkOverrideClockTime()  <- OR DELETED THIS LOOKS SAME.
 ```
