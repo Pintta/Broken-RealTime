@@ -1,2 +1,2 @@
 # RealTime-Fivem
-This script make possible you have Real Time On You FiveM Server :)
+This script enables you to get a realistic time for your game server, supports the qbcore framework well.
