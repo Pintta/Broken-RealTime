@@ -8,11 +8,11 @@ CreateThread(function()
 	while not NetworkIsPlayerActive(PlayerId()) do
 		Wait(0)
 	end
-	TriggerServerEvent("RealTime-Fivem:server:requesttime")
+	TriggerServerEvent('RealTime-Fivem:server:requesttime')
 	while not synced do
 		Wait(0)
 	end
-	TriggerEvent("RealTime-Fivem:client:override")
+	TriggerEvent('RealTime-Fivem:client:override')
 end)
 
 RegisterNetEvent('RealTime-Fivem:client:serversync', function(hour, minute, second, loop)
