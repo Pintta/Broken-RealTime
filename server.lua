@@ -23,7 +23,7 @@ CreateThread(function()
 		if h >= 24 then
 			h = 0
 		end
-		if timer >= 60 * gta_seconds_per_real_second then
+		if timer >= 60 * RockstarLogic then
 			timer = 0
 			TriggerClientEvent('op-RealTime:client:serversync', -1, h, m, s, gta_seconds_per_real_second)
 		end
