@@ -25,11 +25,11 @@ CreateThread(function()
 		end
 		if timer >= 60 * gta_seconds_per_real_second then
 			timer = 0
-			TriggerClientEvent('RealTime-Fivem:client:serversync', -1, h, m, s, gta_seconds_per_real_second)
+			TriggerClientEvent('op-RealTime:client:serversync', -1, h, m, s, gta_seconds_per_real_second)
 		end
 	end
 end)
 
-RegisterServerEvent('RealTime-Fivem:server:requesttime', function()
-	TriggerClientEvent('RealTime-Fivem:client:serversync', -1, h, m, s, gta_seconds_per_real_second)
+RegisterServerEvent('op-RealTime:server:requesttime', function()
+	TriggerClientEvent('op-RealTime:client:serversync', -1, h, m, s, gta_seconds_per_real_second)
 end)
