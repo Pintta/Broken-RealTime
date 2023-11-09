@@ -2,8 +2,8 @@ local h = tonumber(os.date("%H"))
 local m = tonumber(os.date("%M"))
 local s = tonumber(os.date("%S"))
 
-local gta_seconds_per_real_second = 1
-local loopwhole = 1000 / gta_seconds_per_real_second
+local RockstarLogic = 1
+local loopwhole = 1000 / RockstarLogic
 local looptime = loopwhole % 1 >= 0.5 and math.ceil(loopwhole) or math.floor(loopwhole)
 
 CreateThread(function()
