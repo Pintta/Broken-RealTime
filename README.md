@@ -1,5 +1,7 @@
 # op-RealTime
-This script enables you to get a realistic time for your game server, supports the qbcore framework well.
+This script enables you to get a realistic time for your game server.
+
+Support: ESX, QBUS, QBCORE, Standalone.
 
 Tips:
 Disable qb files -> NetworkOverrideClockTime() areas
