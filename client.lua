@@ -2,31 +2,29 @@ local synced = false;
 local h = 0
 local m = 0
 local s = 0
-local looptime = 1000
 
 CreateThread(function()
 	while not NetworkIsPlayerActive(PlayerId()) do
 		Wait(0)
 	end
-	TriggerServerEvent('op-RealTime:server:requesttime')
+	TriggerServerEvent('OikeaKello:KysyAika')
 	while not synced do
 		Wait(0)
 	end
-	TriggerEvent('op-RealTime:client:override')
+	TriggerEvent('OikeaKello:Yliajo')
 end)
 
-RegisterNetEvent('op-RealTime:client:serversync', function(hour, minute, second, loop)
+RegisterNetEvent('OikeaKello:TsekkaaAika', function(hour, minute, second, loop)
 	h = hour
 	m = minute
 	s = second
 	if not synced then
 		synced = true
-		local loopwhole = 1000 / loop
-		looptime = loopwhole % 1 >= 0.5 and math.ceil(loopwhole) or math.floor(loopwhole)
+		Wait(1000)
 	end
 end)
 
-AddEventHandler("gametime:override", function()
+AddEventHandler('OikeaKello:Yliajo', function()
 	CreateThread(function()
 		while true do
 			Wait(10)
@@ -40,7 +38,7 @@ CreateThread(function()
 		Wait(0)
 	end
 	while true do
-		Wait(looptime)
+		Wait(1000)
 		s = s + 1
 		if s >= 60 then
 			s = 0
