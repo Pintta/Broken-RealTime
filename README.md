@@ -9,3 +9,5 @@ Example you find NetworkOverrideClockTime() on you script, do that
 ```lua
 -- NetworkOverrideClockTime()  <- OR DELETED THIS LOOKS SAME.
 ```
+
+Works perfectly with this script: https://github.com/Pintta/Broken-weather
