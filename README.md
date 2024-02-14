@@ -1,4 +1,4 @@
-# op-RealTime
+# Broken-RealTime
 This script enables you to get a realistic time for your game server.
 
 Support: ESX, QBUS, QBCORE, Standalone.
